@@ -8,6 +8,6 @@ public class Main {
 
         XlsxParser xlsxParser = new XlsxParser();
         List<Object[]> data = xlsxParser.XlsxRead();
-        System.out.println(Arrays.toString(data.get(10)));
+        System.out.println(Arrays.toString(data.get(1)));
     }
 }
