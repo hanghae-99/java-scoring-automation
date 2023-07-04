@@ -17,7 +17,7 @@ public class XlsxParser {
     public List<Object[]> XlsxRead() {
         List<Object[]> data = new ArrayList<>();
 
-        String filePath = "/Users/kimhyeongjun/Desktop/VSCodeProject/java-scoring-automation/src/main/xlsx/답안.xlsx";
+        String filePath = "C:\\Users\\lg\\Desktop\\hanghaeScoring\\src\\main\\xlsx\\answerExample.xlsx";
 
         try (FileInputStream fis = new FileInputStream(filePath)) {
             Workbook workbook = new XSSFWorkbook(fis);
@@ -29,8 +29,8 @@ public class XlsxParser {
                         case STRING -> rowData.add(cell.getStringCellValue());
                         case NUMERIC -> rowData.add(cell.getNumericCellValue());
                         case BOOLEAN -> rowData.add(cell.getBooleanCellValue());
-                        case BLANK -> rowData.add(""); // 빈 값을 빈 문자열로 추가
-                        default -> rowData.add(""); // 기본적으로 빈 값을 빈 문자열로 추가
+                        case BLANK -> rowData.add("");
+                        default -> rowData.add("");
                     }
                 }
                 data.add(rowData.toArray());
