@@ -17,7 +17,7 @@ public class XlsxParser {
     public List<Object[]> XlsxRead() {
         List<Object[]> data = new ArrayList<>();
 
-        String filePath = "C:\\Users\\lg\\Desktop\\hanghaeScoring\\src\\main\\xlsx\\answerExample.xlsx";
+        String filePath = "C:\\Users\\lg\\Desktop\\hanghaeScoring\\src\\main\\xlsx\\testAnswer.xlsx";
 
         try (FileInputStream fis = new FileInputStream(filePath)) {
             Workbook workbook = new XSSFWorkbook(fis);
